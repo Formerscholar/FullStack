@@ -4,7 +4,7 @@ import './plugins/element.js'
 import router from './router'
 import http from './http'
 
-
+import './style.css'
 
 Vue.prototype.$http = http
 
