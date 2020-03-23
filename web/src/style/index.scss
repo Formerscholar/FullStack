@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.2em;
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// 定义颜色
+
+$colors:('primay':#db9e3f,
+  'white':#fff,
+  'light':#f9f9f9,
+  "grey":#999,
+  'dar-1':#343440,
+  'dar':#222,
+  'block':#333);
+
+@each $colorKey,
+$color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+// 文本
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+
+}
+
+// font size 
+$base-font-size:1rem;
+$fons-sizes:(xs:0.625,
+  sm:0.75,
+  md:0.8125,
+  lg:0.875,
+  xl:1);
+
+@each $sizeKey,
+$size in $fons-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size * $base-font-size;
+  }
+}
