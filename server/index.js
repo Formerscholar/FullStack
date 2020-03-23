@@ -4,6 +4,7 @@ const app = express()
 //监听的端口
 const port = 3000;
 
+app.set('secret', 'q5s4fq8e461q35g')
 
 app.use(require('cors')())
 app.use(express.json())
